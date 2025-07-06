@@ -1,0 +1,129 @@
+.black-theme {
+    background-color: black;
+}
+
+.white-theme {
+    background-color: white;
+
+}
+
+.grey-theme {
+    background-color: grey;
+}
+
+.main,
+.series {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &__input {
+        font-size: 30px;
+        border: 2px solid transparent;
+        width: 40rem;
+        height: 2.9rem;
+        padding-left: 0.8rem;
+        outline: none;
+        overflow: hidden;
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        transition: all 0.5s;
+        margin-top: 10px;
+
+       
+
+        @media (max-width:1200px) {
+            width: 30rem;
+        }
+
+        @media (max-width:868px) {
+            width: 20rem;
+        }
+
+        @media (max-width:700px) {
+            width: 15rem;
+        }
+
+
+
+
+        &:focus {
+            border: 2px solid #4a9dec;
+            box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+            background-color: white;
+        }
+
+    }
+
+    &__page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .page__cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(auto, 260px));
+            gap: 30px;
+            @media (max-width:1400px) {
+                 grid-template-columns: repeat(2, minmax(auto, 350px));
+            }
+             @media (max-width:1056px) {
+                 grid-template-columns: repeat(1, minmax(auto, 460px));
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                color: black;
+                padding: 10px;
+                gap: 10px;
+                background: #e0e0e0e0;
+                border-radius: 40px;
+                box-shadow: 20px 20px 60px #bebebe,
+                    -20px -20px 60px #ffffff;
+                cursor: pointer;
+                transition: all 1.1s;
+                @media (max-width:1400px){
+                      font-size: 30px;
+                    gap: 15px;
+                }
+                 @media (max-width:1056px){
+                    font-size: 30px;
+                    gap: 30px;
+                 }
+                &:hover {
+                    transform: scale(1.05);
+
+
+                }
+
+                &__img {
+                    position: relative;
+                    padding: 50%;
+                    flex: 1 0 60%;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 110%;
+                        object-fit: cover;
+                        border-radius: 40px;
+                    }
+
+                }
+
+                &__title {
+                    margin-top: 20px;
+                }
+            }
+
+        }
+    }
+
+}
