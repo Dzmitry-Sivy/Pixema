@@ -7,7 +7,8 @@ function Favorites({ setOpenFavorites }: OpenFavoritesProps): JSX.Element {
   const navigate = useNavigate();
   const { favoriteCards, currentUser, setCurrentUser } =
     useContext(UserContext);
-  useEffect(() => {
+  
+    useEffect(() => {
     if (!currentUser) return;
 
     const updatedCurrentUser = {

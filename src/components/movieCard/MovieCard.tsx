@@ -6,6 +6,7 @@ import { UserContext } from "../../context/UserContext";
 import "../loading/loading.scss";
 import "./movie.scss";
 import { ICard } from "../../Types/Types";
+import Loading from "../loading/Loading";
 
 
 function MovieCard(): JSX.Element | null {
@@ -80,12 +81,7 @@ function MovieCard(): JSX.Element | null {
   return (
     <div className="movie">
       {loading && (
-        <p className="loading">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </p>
+        <Loading/>
       )}
       <div className="movie__card">
         <p className="movie__card_delete" onClick={closeCard}>
@@ -107,7 +103,7 @@ function MovieCard(): JSX.Element | null {
           className="movie__card_button"
           onClick={() => addFavoritesCard(card)}
         >
-          Добавить в избранное
+         Add to Favorites
         </button>
         <Outlet />
       </div>

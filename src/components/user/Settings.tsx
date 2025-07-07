@@ -12,13 +12,14 @@ function Settings({
   const dispatch = useDispatch();
   const closeSettings = () => {
     setOpenSettings(false);
-    if (innerRef?.current) {
+   /* if (innerRef?.current) {
       innerRef.current.className = "";
-    }
+    } */
   };
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   const { setCurrentUser, currentUser } = useContext(UserContext);
+  
   useEffect(() => {
     if (!currentUser) return;
 
@@ -29,6 +30,7 @@ function Settings({
     setCurrentUser(updatedCurrentUser);
   }, [theme]);
   console.log(theme);
+  
   return (
     <div className="main__settings settings">
       <p className="settings__close" onClick={closeSettings}>

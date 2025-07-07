@@ -59,8 +59,9 @@ function Filter({
         setLoading(false);
       })
       .catch(() => {
-        setLoading(false);
+        
       }); */
+    setLoading(false);
   };
   const toggleMobilesSidebar = () => {
     setMobileSideBarOpen((prev) => !prev);

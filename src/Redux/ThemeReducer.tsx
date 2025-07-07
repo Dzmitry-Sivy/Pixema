@@ -4,21 +4,21 @@ interface IThemeState {
   theme: string;
 }
 
-// Функция для загрузки состояния темы из localStorage
-export const loadState = (): IThemeState => {
-  const actualThemeStr = localStorage.getItem("currentUser");
 
-  if (actualThemeStr === null) {
-    return { theme: "black" }; // Значение по умолчанию
+export const loadState = (): IThemeState => {
+  const currentUserActual = localStorage.getItem("currentUser");
+
+  if (currentUserActual=== null) {
+    return { theme: "black" }; 
   }
 
   try {
-    const currentUser = JSON.parse(actualThemeStr);
+    const currentUser = JSON.parse(currentUserActual);
     const userTheme = currentUser?.changeTheme;
 
-// Проверяем, является ли userTheme строкой, если нет, возвращаем значение по умолчанию
+
     return {
-      theme: typeof userTheme === "string" ? userTheme : "black",
+      theme: userTheme ? userTheme : "black",
     };
   } catch (error) {
     console.error("Ошибка при загрузке состояния темы:", error);

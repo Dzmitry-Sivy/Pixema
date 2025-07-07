@@ -49,6 +49,7 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [userErrorLogin, setUserErrorLogin] = useState<string>("");
   const [userErrorPassword, setUserErrorPassword] = useState<string>("");
   const [favoriteCards, setFavoriteCards] = useState<ICard[]>(() => {
+   
     const storedFavorites = localStorage.getItem("currentUser");
     if (storedFavorites) {
       const parsed = JSON.parse(storedFavorites);
@@ -57,8 +58,10 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     return [];
   });
 
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
 
   // Загрузка Users из localStorage при инициализации
   useEffect(() => {
@@ -76,6 +79,7 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     }
   }, []);
 
+
   // Синхронизация изменений currentUser с Users и localStorage
   useEffect(() => {
     if (currentUser) {
@@ -92,11 +96,15 @@ const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     }
   }, [currentUser, setCurrentUser]);
 
+
+
   // Сохранение Users в localStorage при изменении
   useEffect(() => {
     localStorage.setItem("Users", JSON.stringify(Users));
   }, [Users]);
 
+
+  
   const register = (userData: IUser): boolean => {
     const userExists = Users.some((user) => user.name === userData.name);
 

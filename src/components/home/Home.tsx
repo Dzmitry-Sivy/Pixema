@@ -88,6 +88,7 @@ function Home({ apiKey }: HomeProps): JSX.Element {
     navigate(`/card/${id}`);
   };
   console.log(movies);
+
   return (
     <div className="main _container">
       <MainInput
