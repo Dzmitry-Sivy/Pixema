@@ -7,7 +7,7 @@
 
     @media (max-width:800px) {
         top: 130px;
-         right: -130px;
+        right: -130px;
     }
 }
 
@@ -25,10 +25,15 @@
     flex-direction: column;
     align-items: center;
     max-height: 800px;
-    padding: 30px;
     overflow-y: auto;
     gap: 20px;
     padding-right: 12px;
+
+    @media (max-width:800px) {
+        width: 300px;
+        background-color: #1b191b;
+        font-size: 30px;
+    }
 
 
     &::-webkit-scrollbar {
@@ -52,7 +57,7 @@
     }
 
 
-    .favorites__empty{
+    .favorites__empty {
         color: #ff00ff;
     }
 

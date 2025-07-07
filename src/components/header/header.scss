@@ -98,7 +98,7 @@
             color: #fff;
             z-index: 2;
             transition: all 0.9s;
-            
+
 
             @media (max-width:450px) {
                 width: 120px;
@@ -286,16 +286,17 @@
     opacity: 0.7;
     font-size: 30px;
 
-    @media (max-width:700px) {
-        padding: 15px;
+    @media (max-width:866px) {
+        min-width: 250px;
+          
         font-size: 30px;
+        top: 295%;
+        right: 290px;
     }
-
-    @media (max-width:576px) {
-        top: 210%;
-        right: 33%;
-        width: 400px;
-    }
+ @media (max-width:526px){
+  right:60px;
+ }
+   
 
     &:hover {
         box-shadow: 0px 0px 30px 1px rgba(204, 0, 255, 0.3);
