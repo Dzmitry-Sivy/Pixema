@@ -1,0 +1,64 @@
+[debug] [2025-07-09T20:39:21.926Z] ----------------------------------------------------------------------
+[debug] [2025-07-09T20:39:21.929Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-07-09T20:39:21.929Z] CLI Version:   14.9.0
+[debug] [2025-07-09T20:39:21.929Z] Platform:      win32
+[debug] [2025-07-09T20:39:21.929Z] Node Version:  v22.14.0
+[debug] [2025-07-09T20:39:21.930Z] Time:          Wed Jul 09 2025 23:39:21 GMT+0300 (Москва, стандартное время)
+[debug] [2025-07-09T20:39:21.930Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-09T20:39:21.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-09T20:39:21.935Z] > authorizing via signed-in user (dmitrysivyy1989@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\frontend\INNODOM\diplom
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-07-09T20:39:50.706Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:39:50.707Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:39:50.709Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-07-09T20:39:50.709Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"pixema-1989"}
+[debug] [2025-07-09T20:39:51.022Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-07-09T20:39:51.022Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_AVAILABLE","suggestedProjectId":"pixema-1989"}
+[debug] [2025-07-09T20:40:18.374Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:18.374Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:18.374Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-07-09T20:40:18.374Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"pixema-1989","name":"my-react-ts-app-1989"}
+[debug] [2025-07-09T20:40:19.441Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-07-09T20:40:19.441Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.5481717941155869728"}
+[debug] [2025-07-09T20:40:19.442Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:19.442Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:19.442Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 [none]
+[debug] [2025-07-09T20:40:20.183Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 200
+[debug] [2025-07-09T20:40:20.183Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 {"name":"operations/create_project.global.5481717941155869728"}
+[debug] [2025-07-09T20:40:20.693Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-07-09T20:40:20.693Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:20.693Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:20.693Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 [none]
+[debug] [2025-07-09T20:40:20.887Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 200
+[debug] [2025-07-09T20:40:20.887Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5481717941155869728 {"name":"operations/create_project.global.5481717941155869728","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"900387770334","projectId":"pixema-1989","lifecycleState":"ACTIVE","name":"my-react-ts-app-1989","createTime":"2025-07-09T20:40:20.175701Z"}}
+[debug] [2025-07-09T20:40:20.888Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:20.888Z] Checked if tokens are valid: true, expires at: 1752095880649
+[debug] [2025-07-09T20:40:20.889Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/pixema-1989:addFirebase [none]
+[debug] [2025-07-09T20:40:22.074Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/pixema-1989:addFirebase 403
+[debug] [2025-07-09T20:40:22.074Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/pixema-1989:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-07-09T20:40:22.075Z] Request to https://firebase.googleapis.com/v1beta1/projects/pixema-1989:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2025-07-09T20:40:22.076Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/pixema-1989:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

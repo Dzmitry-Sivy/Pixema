@@ -5,7 +5,7 @@ type ApiKeyContextType = {
 };
 
 const ApiKeyContext = createContext<ApiKeyContextType>({
-  apiKey: "60QTFQS-DPE44Y8-G003KC5-W1E0QJ1", //   60QTFQS-DPE44Y8-G003KC5-W1E0QJ1 --   7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J --  H1S6GE5-9VT4ANT-Q5YV6SD-BYK4YF1  -- 6Y8320X-FW64YXM-HSAAXXE-9WY3VMK
+  apiKey: "7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J", //   60QTFQS-DPE44Y8-G003KC5-W1E0QJ1 --   7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J --  H1S6GE5-9VT4ANT-Q5YV6SD-BYK4YF1  -- 6Y8320X-FW64YXM-HSAAXXE-9WY3VMK
 });
 
 interface ApiKeyProviderProps {
@@ -13,7 +13,7 @@ interface ApiKeyProviderProps {
 }
 
 const ApiKeyProvider: React.FC<ApiKeyProviderProps> = ({ children }) => {
-  const apiKey = "60QTFQS-DPE44Y8-G003KC5-W1E0QJ1";
+  const apiKey = "7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J";
 
   return (
     <ApiKeyContext.Provider value={{ apiKey }}>
