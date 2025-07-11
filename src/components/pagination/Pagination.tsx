@@ -21,7 +21,7 @@ function Pagination({ page, setPage }: PaginationProps): JSX.Element {
         <p className="text__prev">Prev</p>
       </button>
       <button className="pagination__next" onClick={nextPagination}>
-        <img className="img__next" src="img/arrow1.png" alt="next" />
+        <img className="img__next" src="/img/arrow1.png" alt="next" />
        <p className="text__next">Next</p>
       </button>
     </div>

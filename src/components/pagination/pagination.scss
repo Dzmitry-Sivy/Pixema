@@ -6,6 +6,10 @@
     padding: 50px;
     margin: 0 auto;
 
+    @media (max-width:868px) {
+        display: none;
+    }
+
     button {
         width: 100px;
         padding: 10px;
@@ -36,39 +40,6 @@
             width: 30px;
         }
 
-
-
-
-        @media (max-width:1056px) {
-            position: fixed;
-            top: 600px;
-            left: 30px;
-
-            .img__prev {
-                display: block;
-
-            }
-
-            .text__prev {
-                display: none;
-            }
-        }
-
-        @media (max-width:868px) {
-            position: fixed;
-            top: 180px;
-            left: 5px;
-
-        }
-
-        @media (max-width:524px) {
-            position: fixed;
-            top: 170px;
-            left: 10px;
-        }
-
-
-
     }
 
 
@@ -83,32 +54,10 @@
 
         }
 
-        @media (max-width:1056px) {
-            position: fixed;
-            top: 600px;
-            right: 30px;
 
-            .img__next {
-                display: block;
-            }
 
-            .text__next {
-                display: none;
-            }
-        }
 
-        @media (max-width:868px) {
-            position: fixed;
-            top: 180px;
-            right: 5px;
 
-        }
 
-        @media (max-width:524px) {
-            position: fixed;
-            top: 170px;
-            right: 10px;
-
-        }
     }
 }

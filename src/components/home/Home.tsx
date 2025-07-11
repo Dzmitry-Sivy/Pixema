@@ -18,9 +18,13 @@ function Home({ apiKey }: HomeProps): JSX.Element {
   const [mainMovies, mainSetMovies] = useState<IMovie[]>([]);
   const [page, Setpage] = useState<number>(1);
   const [limitOfPage, setLimitOfPage] = useState<number>(12);
-  const mainUrl: string = `https://api.kinopoisk.dev/v1.4/movie/search?page=${page}&limit=${limitOfPage}&rating.kp=7.2-10`;
+  const [mainUrl, setMainUrl] = useState<string>(
+    `https://api.kinopoisk.dev/v1.4/movie/search?page=${page}&limit=${limitOfPage}&rating.kp=7.2-10`
+  );
+  //const mainUrl: string = `https://api.kinopoisk.dev/v1.4/movie/search?page=${page}&limit=${limitOfPage}&rating.kp=7.2-10`;
   const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
   const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -62,18 +66,28 @@ function Home({ apiKey }: HomeProps): JSX.Element {
     }
   }, [page]);
 
-  /*
   useEffect(() => {
+    const loadMore = () => {
+      const newLimit = limitOfPage + 6;
+      const url = new URL(searchUrl || mainUrl);
+      url.searchParams.set("limit", newLimit.toString());
+      setMainUrl(url.toString());
+      setLimitOfPage(newLimit);
+      setIsLoadingMore(false); // сбрасываем флаг после загрузки
+      console.log("Подгрузка");
+    };
+
     const handleScroll = () => {
-      if (
-        window.innerWidth < 868 &&
-        !isLoadingMore && 
-        window.innerHeight + document.documentElement.scrollTop >=
-          document.documentElement.offsetHeight - 1
-      ) {
-        
-        setIsLoadingMore(true);
-        Setpage((prevPage) => prevPage + 1);
+      if (window.innerWidth <= 1056) {
+        if (
+          window.innerHeight + window.scrollY >=
+            document.body.offsetHeight - 100 &&
+          !loading &&
+          !isLoadingMore
+        ) {
+          loadMore();
+          setIsLoadingMore(true);
+        }
       }
     };
 
@@ -82,8 +96,8 @@ function Home({ apiKey }: HomeProps): JSX.Element {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isLoadingMore]);
-*/
+  }, [loading, isLoadingMore, limitOfPage, searchUrl, mainUrl]);
+
   const openCart = (id: string) => {
     navigate(`/card/${id}`);
   };

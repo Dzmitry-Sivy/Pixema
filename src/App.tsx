@@ -13,7 +13,7 @@ import Trailer from "./components/movieCard/Trailer";
 import { useSelector } from "react-redux";
 import { RootState } from "./Redux/store";
 import classNames from "classnames";
-const apiKey = "7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J"; //   60QTFQS-DPE44Y8-G003KC5-W1E0QJ1 --   7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J --  H1S6GE5-9VT4ANT-Q5YV6SD-BYK4YF1  -- 6Y8320X-FW64YXM-HSAAXXE-9WY3VMK
+const apiKey = " 60QTFQS-DPE44Y8-G003KC5-W1E0QJ1"; //   60QTFQS-DPE44Y8-G003KC5-W1E0QJ1 --   7PXP2XM-HE44Z9R-PWZJV8Y-PMM3F8J --  H1S6GE5-9VT4ANT-Q5YV6SD-BYK4YF1  -- 6Y8320X-FW64YXM-HSAAXXE-9WY3VMK
 
 function App() {
   const theme = useSelector((state: RootState) => state.theme.theme);
